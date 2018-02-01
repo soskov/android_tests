@@ -2,91 +2,87 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/la1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yuriy.calc.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.yuriy.loginapp.MainActivity">
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="177dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="207dp"
-        android:text="resultat"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/num1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="num1"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/num2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:hint="num2"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/num1"
-        app:layout_constraintTop_toBottomOf="@+id/num1" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="92dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:onClick="onClickButton1"
-        android:text="+"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/num2" />
-
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:onClick="onClickButton2"
-        android:text="-"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/result" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:onClick="onClickButton3"
-        android:text="/"
-        android:textSize="24sp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="93dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:onClick="onClickButton4"
-        android:text="*"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/loginimage"
+            android:paddingBottom="40sp"
+            android:paddingTop="40sp"
+            app:srcCompat="@android:drawable/ic_menu_compass" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="@string/authorization"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:padding="13sp"
+            android:textColor="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/fields"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="13sp"
+            android:textColor="@color/colorAccent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40sp"
+            android:layout_marginRight="40sp"
+            android:background="@drawable/button"
+            android:text="@string/login"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:visibility="visible"
+            app:srcCompat="@android:drawable/btn_star" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
